@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Text Generator</title>
+</head>
+<body>
+<div id="randomTextContainer">
+    <p id="randomText"></p>
+</div>
+<script>
+    var textOptions = [
+        "As they say, a refresh is worth 1000 words",
+        "You seem like a pineapple on pizza kind of guy.",
+        "Random flavor text is great!",
+        "Hard choices lie ahead.",
+        "Decisions, decisions..."];
+    function selectRandomText() {
+        var randomIndex = Math.floor(Math.random() * textOptions.length);
+        return textOptions[randomIndex];
+    }
+    document.getElementById("randomText").textContent = selectRandomText();
+    window.onload = function () {
+        document.getElementById("randomText").textContent = selectRandomText();
+    }
+</script>
+</body>
+</html>
